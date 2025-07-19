@@ -5,7 +5,7 @@ setlocal enabledelayedexpansion
 
 :: Check if folder path is passed
 if "%~1"=="" (
- echo Usage: download_playlist.bat "C:\path\to\folder" [playlist_url]
+ echo Usage: "%~0" "\path\to\folder" "[playlist_url]"
  exit /b 1
 )
 
