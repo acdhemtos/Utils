@@ -26,3 +26,35 @@ def s(*lists):
 		result.extend(lst)
 	
 	return result
+def p(*lists):
+	lists = clean(lists)
+	if len(lists)==1:
+		return lists[0]
+	
+	lists.sort(key=len, reverse=True)
+	
+	large = lists.pop()
+	
+	while lists:
+		small = lists.pop()
+		if len(small) == len(large):
+			large = [item for pair in zip(small, large) for item in pair]
+		
+		if len(small) > len(large):
+			small,large = large,small
+		
+		result = []	
+		small.append(None)
+		while small:
+			k = len(large)//len(small)
+			
+			result.extend(large[:k])
+			del large[:k]
+			
+			result.append(small.pop(0))
+		
+		result.pop()
+		
+		large = result
+	
+	return large
