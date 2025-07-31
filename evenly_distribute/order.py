@@ -1,4 +1,4 @@
-# github.com/acdhemtos/Utils/evenly_distribute/script.py
+# github.com/acdhemtos/Utils/evenly_distribute/order.py
 
 import sys
 

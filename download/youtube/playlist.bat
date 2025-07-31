@@ -1,3 +1,5 @@
+:: # github.com/acdhemtos/Utils/download/youtube/playlist.bat
+
 @echo off
 setlocal enabledelayedexpansion
 

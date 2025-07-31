@@ -1,3 +1,5 @@
+# github.com/acdhemtos/Utils/timelapse/rename.py
+
 import asyncio
 import os
 import shutil
